@@ -1,0 +1,230 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color--primario: #000000;
+    --color--secundario:#F6F6F6;
+    --color--terciario: #22D4FD;
+    --color--hover: #272727;
+
+    --fuente-montserrat: 'Montserrat', sans-serif;
+    --fuente--krona:  'Krona One', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    box-sizing: border-box;
+    background-color:var(--color--primario);
+    color: var(--color--secundario);
+     /* height: 100vh; */
+}
+
+.header{
+    padding: 2% 0% 0% 15%;
+
+}
+.header_menu{
+    display: flex;
+    gap: 80px;
+
+}
+
+.header_menu_link {
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color--terciario);
+    text-decoration: none;
+}
+
+.presentacion {
+    display: flex;
+    align-items: center;
+    padding: 5% 15%;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+
+.presentacion_contenido{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.presentacion_contenido_titulo{
+    font-size: 2.25rem;
+    font-family: var(--fuente--krona);
+}
+
+.titulo-destaque{
+    color: var(--color--terciario);
+}
+
+.presentacion_contenido_texto{
+    font-size: 1.5rem;
+    font-family: var(--fuente-montserrat);
+    
+}
+.presentacion_enlaces{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items:  center;
+    gap: 32px;
+}
+
+
+
+.presentacion_enlaces_subtitulo {
+    font-family: var(--fuente--krona);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+
+.presentacion_enlaces_link{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--color--terciario);
+    width: 50%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: var(--color--secundario);
+    font-family: var(--fuente-montserrat);   
+    
+    
+}
+
+.presentacion_enlaces_link:hover{
+
+    background-color: var(--color--hover);
+}
+
+.presentacion_imagen {
+    width: 50%;
+    position: relative;
+    top: -350px; /* Mueve la imagen hacia arriba */
+}
+
+
+
+.presentacion-precios {
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre las columnas */
+    gap: 32px; /* Espacio entre las columnas */
+    padding: 50px;
+    
+    
+  }
+
+
+  
+  .columna {
+    display:block;
+    justify-content: center;
+    flex: 1; /* Hace que cada columna ocupe el mismo espacio */
+    background-color: #000000;
+    padding: 50px;
+    border-radius: 8px;
+    text-align:center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #22D4FD
+    
+  }
+  
+  .precio {
+    font-size: 24px;
+    font-weight: bold;
+    color: #22D4FD;
+  }
+  
+  h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family:  'Montserrat', sans-serif;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #F6F6F6;
+    font-family:  'Montserrat', sans-serif;
+  }
+
+.footer{
+    background-color: var(--color--terciario);
+    padding: 24px;
+    color: var(--color--primario);
+    text-align: center;
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media (max-width:1200px ){
+    .header{
+        padding: 10%;
+    }
+    .header_menu{
+        justify-content: center;
+    }
+
+    .presentacion{
+        flex-direction: column-reverse;
+        padding: 5%;
+
+    }
+    .presentacion_contenido{
+        width: auto;
+    }
+}
+
+@media (max-width:1200px ){
+    .header {
+        padding: 10%;
+    }
+
+    .header_menu {
+        justify-content: center;
+    }
+
+    .presentacion {
+        flex-direction: column-reverse;
+        padding: 5%;
+        align-items: center; /* nuevo */
+        text-align: center;  /* nuevo */
+    }
+
+    .presentacion_contenido {
+        width: 100%;
+    }
+
+    .presentacion_imagen {
+        width: 80%;         /* nuevo */
+        top: 0;             /* nuevo */
+        position: static;   /* nuevo */
+        margin-bottom: 20px;/* nuevo */
+    }
+
+    .presentacion_enlaces_link {
+        width: 80%;         /* nuevo */
+    }
+
+    .presentacion-precios {
+        flex-direction: column; /* nuevo */
+        padding: 5%;            /* nuevo */
+    }
+
+    .columna {
+        margin-bottom: 20px;    /* nuevo */
+    }
+}
