@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
+import Navbar from "../components/Navbar"; // AQUÍ IMPORTAMOS TU NUEVO NAVBAR ESTRELLA
 
 export const metadata: Metadata = {
   title: "Psicólogo en Colonia del Valle CDMX | Terapia Individual y de Pareja",
@@ -23,31 +24,9 @@ export default function RootLayout({
       </head>
       <body className="bg-cloud-dancer antialiased min-h-screen flex flex-col">
         
-        {/* --- NAVBAR --- */}
-        <nav className="fixed top-0 w-full z-50 bg-white border-b border-gray-100 shadow-sm">
-          <div className="max-w-7xl mx-auto px-8 h-24 flex justify-between items-center">
-            {/* LOGO */}
-            <Link href="/" className="group flex items-end gap-1">
-              <span className="font-heading text-2xl text-deep-neuro tracking-tighter transition-colors group-hover:text-accent-soft">
-                Carlos Villa
-              </span>
-              <span className="font-body text-[10px] uppercase tracking-[0.3em] text-accent-soft pb-1 italic">
-                Tobón
-              </span>
-            </Link>
-            
-            {/* MENÚ */}
-            <div className="hidden md:flex items-center space-x-8 font-body text-[11px] uppercase tracking-[0.2em] text-gray-500">
-              <Link href="/sobre-mi" className="hover:text-deep-neuro transition-all">Sobre Mí</Link>
-              <Link href="/precios" className="hover:text-deep-neuro transition-all">Precios</Link>
-              <Link href="/blog" className="hover:text-deep-neuro transition-all font-bold text-deep-neuro">Blog</Link>
-              <Link href="/politicas" className="hover:text-deep-neuro transition-all">Políticas</Link>
-              <Link href="https://calendly.com/carlosvillatobon/30min" target="_blank" className="ml-4 px-6 py-3 bg-deep-neuro text-white rounded-full text-[10px] hover:bg-accent-soft transition-colors shadow-md">
-                Agendar Cita
-              </Link>
-            </div>
-          </div>
-        </nav>
+        {/* --- NUEVO NAVBAR INTELIGENTE --- */}
+        {/* Esto llama al archivo Navbar.tsx que acabamos de crear */}
+        <Navbar />
 
         {/* CONTENIDO PRINCIPAL */}
         <main className="pt-24 flex-grow">
@@ -68,7 +47,7 @@ export default function RootLayout({
               </p>
             </div>
 
-            {/* REDES SOCIALES (Texto Minimalista para evitar errores de librerías) */}
+            {/* REDES SOCIALES */}
             <div className="space-y-4 flex flex-col items-center md:items-start">
               <h4 className="font-body text-[10px] uppercase tracking-[0.3em] text-accent-soft font-bold">Conecta</h4>
               <div className="flex flex-col space-y-3 font-body text-[10px] uppercase tracking-widest text-gray-400">
